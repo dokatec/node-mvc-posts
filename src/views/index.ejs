@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 class="cabecalho__logo">Posts MSG</h1>
+      <nav class="cabecalho__links">
+        <a class="cabecalho__link" href="">Home</a>
+        <a class="cabecalho__link" href="">Meus Posts</a>
+        <a class="cabecalho__link" href="">Blog</a>
+        <a class="cabecalho__link" href="">Contato</a>
+      </nav>
+    </header>
+    <main class="principal">
+
+      <!-- Section de post mensagem -->
+      <section class="post__create">
+        <h2 class="post__titulo">Titulo</h2>
+        <form class="post__create-form" action="/add" method="post">
+          <input class="post__create-input" type="text" name="titulo" id="titulo">
+          <h2 class="post__titulo">Mensagem</h2>
+          <textarea class="post__create-textarea" name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+          <button class="post__create-button" type="submit">Salvar</button>
+        </form>
+      </section>
+
+
+      <!-- Section de post mensagem -->
+      <% for(var i=0; i<post.length; i++) {%>
+      <section class="post__mensagem">
+        <div class="post__mensagem-header">
+          <div class="alinhar__items">
+          <h3 class="post__mensagem-titulo">Titulo: <%= post[i].titulo %></h3>
+          <h4 class="post__mensagem-id"># <%= post[i]._id %></h3>
+          </div>
+            <p class="post__mensagem-texto"><%= post[i].mensagem %></p>
+            <p class="post__mensagem-data"><%= post[i].date %></p>
+          </div>
+      </section>
+    <% } %>
+    </main>
+    <footer class="rodape"></footer>
+  </body>
+</html>
