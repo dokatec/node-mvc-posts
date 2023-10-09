@@ -29,6 +29,10 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   padding: 20px;
+  transition: 0.8s;
+}
+.cabecalho__link:hover {
+  color: #9d76c1;
 }
 
 .principal {

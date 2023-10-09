@@ -15,3 +15,5 @@ export async function create(request, response) {
   });
   return response.redirect("/");
 }
+
+export async function destroy() {}
